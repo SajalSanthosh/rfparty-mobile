@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    - run: npm ci --force
     - run: npm run init
     - run: npx cordova platform add android
     - run: npm run build
